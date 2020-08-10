@@ -10,11 +10,19 @@ namespace LINQProblems
     {
         static void Main(string[] args)
         {
-            var words = new List<string>() { "the", "bike", "this", "it", "tenth", "mathematics" };
-            var wordsContainingTH = words.Where(w => w.Contains("th"));
-            foreach (var word in wordsContainingTH)
+            //var words = new List<string>() { "the", "bike", "this", "it", "tenth", "mathematics" };
+            //var wordsContainingTH = words.Where(w => w.Contains("th"));
+            ////foreach (var word in wordsContainingTH)
+            ////{
+            ////    Console.WriteLine(word);
+            ////    Console.ReadLine();
+            ////}
+
+            var names = new List<string>() { "Mike", "Brad", "Nevin", "Zack", "Mike" };
+            var copiedList = names.Distinct();
+            foreach (var name in copiedList)
             {
-                Console.WriteLine(word);
+                Console.WriteLine(name);
                 Console.ReadLine();
             }
         }
