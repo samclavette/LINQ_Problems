@@ -12,24 +12,24 @@ namespace LINQProblems
     {
         static void Main(string[] args)
         {
-            var words = new List<string>() { "the", "bike", "this", "it", "tenth", "mathematics" };
-            var wordsContainingTH = words.Where(w => w.Contains("th"));
-            foreach (var word in wordsContainingTH)
-            {
-                Console.WriteLine(word);
-                Console.ReadLine();
-            }
+            //var words = new List<string>() { "the", "bike", "this", "it", "tenth", "mathematics" };
+            //var wordsContainingTH = words.Where(w => w.Contains("th"));
+            //foreach (var word in wordsContainingTH)
+            //{
+            //    Console.WriteLine(word);
+            //    Console.ReadLine();
+            //}
 
-            var names = new List<string>() { "Mike", "Brad", "Nevin", "Zack", "Mike" };
-            var copiedList = names.Distinct();
-            foreach (var name in copiedList)
-            {
-                Console.WriteLine(name);
-                Console.ReadLine();
-            }
+            //var names = new List<string>() { "Mike", "Brad", "Nevin", "Zack", "Mike" };
+            //var copiedList = names.Distinct();
+            //foreach (var name in copiedList)
+            //{
+            //    Console.WriteLine(name);
+            //    Console.ReadLine();
+            //}
 
             // for each string
-            // make string into an array
+            // make string into an array of elements
             // convert elements to doubles
             // order by lowest to highest
             // remove the first of the array
@@ -41,13 +41,16 @@ namespace LINQProblems
              "93,81,78,84,69",
              "73,88,83,99,64",
              "98,100,66,74,55"};
+            var doubleList = new List<double>();
             foreach (var set in classGrades)
             {
                 var gradeList = set.Split(',');
                 foreach (var grade in gradeList)
                 {
-                    Convert.ToDouble(grade);
+                    var newGrade = Convert.ToDouble(grade);
+                    doubleList.Add(newGrade);
                 }
+                doubleList.OrderBy();
             }
 
             var mike = "TERRILL";
