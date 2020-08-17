@@ -41,17 +41,25 @@ namespace LINQProblems
              "93,81,78,84,69",
              "73,88,83,99,64",
              "98,100,66,74,55"};
-            var doubleList = new List<double>();
+            var newClassGrades = new List<double>();
             foreach (var set in classGrades)
             {
                 var gradeList = set.Split(',');
+                var newGradeList = new List<double>();
                 foreach (var grade in gradeList)
                 {
                     var newGrade = Convert.ToDouble(grade);
-                    doubleList.Add(newGrade);
+                    newGradeList.Add(newGrade);
                 }
-                doubleList.OrderBy();
+                newGradeList.Sort();
+                newGradeList.RemoveAt(0);
+                var averageGrade = newGradeList.Average();
+                newClassGrades.Add(averageGrade);
             }
+
+            var classAverage = newClassGrades.Average();
+            Console.WriteLine(classAverage);
+            Console.ReadLine();
 
             var mike = "TERRILL";
             var array = mike.ToCharArray();
